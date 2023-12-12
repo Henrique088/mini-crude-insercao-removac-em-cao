@@ -87,7 +87,8 @@ int main()
             for(int n=0;n<listaAlunos.ultimo;n++){
                 if(strcmp(listaAlunos.alunos[n].nome, nomes)==0){
                   
-                   strcpy(listaAlunos.alunos[n].nome,listaAlunos.alunos[listaAlunos.ultimo].nome);
+                   strcpy(listaAlunos.alunos[n].nome,listaAlunos.alunos[listaAlunos.ultimo -1].nome);
+                   listaAlunos.alunos[n].nota = listaAlunos.alunos[listaAlunos.ultimo - 1].nota;
                    listaAlunos.ultimo--;
                 }
             }
